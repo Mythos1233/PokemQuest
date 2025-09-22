@@ -1,0 +1,100 @@
+<html>
+<head>
+<base href="." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PokemQuest</title>
+<link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="quiz-container">
+    <div id="home-menu" class="home-menu">
+        <div class="quiz-logo">
+            <img 
+                src="imgs/logo.png" 
+                alt="Logo do Quiz Pokémon - Uma clássica Pokébola vermelha e branca girando suavemente" 
+                width="200" 
+                height="200"
+            >
+        </div>
+        <h1>Que Pokémon é Você?</h1>
+        <p>Responda 14 perguntas para descobrir seu espírito Pokémon! Você é energético como Pikachu, feroz como Charizard ou misterioso como Gengar? Faça este teste para descobrir!</p>
+        <button class="start-button" onclick="startQuiz()">Começar Teste</button>
+        <button onclick="showCredits()" class="credits-button">Desenvolvedores</button>
+    </div>
+    
+    <div id="quiz-content">
+        <div class="progress-container">
+            <div class="progress-label">EXP</div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+        <div id="quiz">
+        </div>
+        <div id="result">
+            <h2>Seu Espírito Pokémon é...</h2>
+            <div class="pokemon-result" id="pokemon-result"></div>
+            <p id="description"></p>
+            <button class="start-button" onclick="resetQuiz()">Fazer o Teste Novamente</button>
+        </div>
+    </div>
+</div>
+
+<div id="credits" class="credits-container">
+    <button class="close-credits" onclick="closeCredits()">×</button>
+    <div class="credits-content">
+        <h2>Desenvolvedores do Quiz</h2>
+        <div class="developer-card">
+            <div class="developer-image">
+                <img 
+                    src="imgs/Eu.jpg" 
+                    alt="Murilo representando o desenvolvedor principal"
+                    width="100"
+                    height="100"
+                >
+            </div>
+            <div class="developer-info">
+                <h3>Desenvolvedor Principal</h3>
+                <p>Murilo Barros</p>
+                <p>Responsável pela lógica do quiz e mecânicas de pontuação</p>
+            </div>
+        </div>
+        <div class="developer-card">
+            <div class="developer-image">
+                <img 
+                    src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/196.png" 
+                    alt="Espeon representando o designer"
+                    width="100"
+                    height="100"
+                >
+            </div>
+            <div class="developer-info">
+                <h3>Designer</h3>
+                <p>Mateus de Araujo e Levy</p>
+                <p>Responsável pelo design visual e experiência do usuário</p>
+            </div>
+        </div>
+        <div class="developer-card">
+            <div class="developer-image">
+                <img 
+                    src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png" 
+                    alt="Mew representando o especialista em conteúdo"
+                    width="100"
+                    height="100"
+                >
+            </div>
+            <div class="developer-info">
+                <h3>Conteúdo</h3>
+                <p>Leonardo e Lucas Gonçalves</p>
+                <p>Responsável pela criação das perguntas e sistema de personalidade</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>
